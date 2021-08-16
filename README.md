@@ -1,36 +1,8 @@
-# shop-vue-vuex-cloudfront
+# Task 2 - S3, Cloudfront, Serverless
 
-See `develop` branch for development
+AWS S3Bucket http://my-first-app-hand.s3-website-eu-west-1.amazonaws.com/
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+Cloudfront http://dkrl8zrxcviv6.cloudfront.net/
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
