@@ -1,11 +1,11 @@
-service: node-in-aws-web
+service: my-first-app-auto
 
 frameworkVersion: '2'
 
 provider:
   name: aws
   region: eu-west-1
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   # setup profile for AWS CLI.
   # profile: node-aws
 
@@ -18,7 +18,7 @@ plugins:
 
 custom:
   client:
-    bucketName: node-in-aws-web-bucket
+    bucketName: my-first-app-auto
     distributionFolder: build
   s3BucketName: ${self:custom.client.bucketName}
 
@@ -37,7 +37,7 @@ resources:
           IndexDocument: index.html
           ErrorDocument: index.html
         # VersioningConfiguration:
-        #   Status: Enabled
+        #  Status: Enabled
 
     ## Specifying the policies to make sure all files inside the Bucket are avaialble to CloudFront
     WebAppS3BucketPolicy:
@@ -80,8 +80,8 @@ resources:
              #   HTTPPort: 80
              #   HTTPSPort: 443
              #   OriginProtocolPolicy: https-only
-          Enabled: true
-          IPV6Enabled: true
+          Enabled: 'true'
+          IPV6Enabled: 'true'
           HttpVersion: http2
           ## Uncomment the following section in case you are using a custom domain
           # Aliases:
@@ -103,7 +103,7 @@ resources:
                 - Origin
                 - Authorization
               ## Defining if and how the QueryString and Cookies are forwarded to the origin which in this case is S3
-              QueryString: false
+              QueryString: 'false'
               Cookies:
                 Forward: none
             ## The origin id defined above
